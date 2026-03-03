@@ -17,10 +17,12 @@ class GrassmannConfig:
     n_layers: int = 6
     d_ff: int = 4 * 512
     reduced_dim: int = 32                      # Paper uses r=32
-    window_sizes: List[int] = field(default_factory=lambda: [1, 2, 4, 8, 12, 16])
-    max_seq_len: int = 512
+    # Larger windows suit longer contexts: covers ~2048 / 6 ≈ 340 tokens per layer
+    window_sizes: List[int] = field(default_factory=lambda: [1, 2, 4, 8, 16, 32])
+    max_seq_len: int = 2048
     dropout: float = 0.1
     tie_tok_embeddings: bool = True
+    apply_sparse: bool = True                  # Set False for dense ablation
 
 
 class GrassmannLM(nn.Module):
@@ -61,6 +63,11 @@ class GrassmannLM(nn.Module):
 
         # Weight initialisation matching the original repo
         self.apply(self._init_weights)
+
+        # Apply 2:4 structured sparsity masks to all MaskedLinear layers
+        # (FFN fc1/fc2 and Grassmann W_red, W_plu, W_gate)
+        if config.apply_sparse:
+            apply_2to4_masks(self)
 
     def _init_weights(self, module: nn.Module) -> None:
         if isinstance(module, nn.Linear):

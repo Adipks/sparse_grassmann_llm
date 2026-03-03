@@ -12,11 +12,11 @@ from .blocks import LearnedPositionalEmbedding, PositionalEncodingConfig, Transf
 @dataclass
 class TransformerConfig:
     vocab_size: int
-    d_model: int = 320
-    n_layers: int = 10
-    n_heads: int = 5
-    d_ff: int = 4 * 320
-    max_seq_len: int = 512
+    d_model: int = 432          # matched to Grassmann 21.75M → 21.64M params
+    n_layers: int = 8
+    n_heads: int = 8
+    d_ff: int = 4 * 432
+    max_seq_len: int = 2048
     dropout: float = 0.1
     tie_tok_embeddings: bool = True
 

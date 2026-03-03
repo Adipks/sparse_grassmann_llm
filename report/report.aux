@@ -1,0 +1,90 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{grassmann2024}
+\citation{nvidia2to4}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Contributions.}{1}{section*.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2}Architecture}{1}{section.2}\protected@file@percent }
+\newlabel{sec:arch}{{2}{1}{Architecture}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Grassmann LM}{1}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Token representation.}{1}{section*.3}\protected@file@percent }
+\citation{merity2017pointer}
+\@writefile{toc}{\contentsline {paragraph}{Grassmann Mixing.}{2}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sparse Feed-Forward (MaskedLinear + \textsc  {PAT}{}).}{2}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Transformer Baseline}{2}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Parameter Parity}{2}{subsection.2.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Model sizes.}}{2}{table.caption.6}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:params}{{1}{2}{Model sizes}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Training Setup}{2}{section.3}\protected@file@percent }
+\newlabel{sec:training}{{3}{2}{Training Setup}{section.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Training hyperparameters.}}{2}{table.caption.7}\protected@file@percent }
+\newlabel{tab:hparams}{{2}{2}{Training hyperparameters}{table.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Per-model training configuration.}}{2}{table.caption.8}\protected@file@percent }
+\newlabel{tab:train-per-model}{{3}{2}{Per-model training configuration}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Results}{2}{section.4}\protected@file@percent }
+\newlabel{sec:results}{{4}{2}{Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Language Modelling Quality}{2}{subsection.4.1}\protected@file@percent }
+\newlabel{sec:quality}{{4.1}{2}{Language Modelling Quality}{subsection.4.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Wikitext-2 validation perplexity ($\downarrow $ better).}}{2}{table.caption.9}\protected@file@percent }
+\newlabel{tab:ppl}{{4}{2}{Wikitext-2 validation perplexity ($\downarrow $ better)}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {paragraph}{Why does \textsc  {Grassmann}{} outperform the Transformer?}{2}{section*.10}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Validation perplexity comparison. Lower is better. Both \textsc  {Grassmann}{} variants achieve $3.7\text  {--}3.9\times $ lower perplexity than the Transformer.}}{3}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:ppl}{{1}{3}{Validation perplexity comparison. Lower is better. Both \grassmann {} variants achieve $3.7\text {--}3.9\times $ lower perplexity than the Transformer}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}FP32 GPU Throughput}{3}{subsection.4.2}\protected@file@percent }
+\newlabel{sec:throughput}{{4.2}{3}{FP32 GPU Throughput}{subsection.4.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces FP32 throughput (tokens/sec, batch=1, GPU).}}{3}{table.caption.12}\protected@file@percent }
+\newlabel{tab:throughput-fp}{{5}{3}{FP32 throughput (tokens/sec, batch=1, GPU)}{table.caption.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}VRAM Scaling}{3}{subsection.4.3}\protected@file@percent }
+\newlabel{sec:vram}{{4.3}{3}{VRAM Scaling}{subsection.4.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces FP32 throughput scaling. The Transformer peaks at $n=512$ then degrades; \textsc  {Grassmann}{} models scale nearly linearly.}}{3}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:throughput}{{2}{3}{FP32 throughput scaling. The Transformer peaks at $n=512$ then degrades; \grassmann {} models scale nearly linearly}{figure.caption.13}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Peak VRAM (MB) at inference (FP32, batch=1).}}{3}{table.caption.14}\protected@file@percent }
+\newlabel{tab:vram}{{6}{3}{Peak VRAM (MB) at inference (FP32, batch=1)}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{No KV-cache.}{3}{section*.16}\protected@file@percent }
+\newlabel{eq:kvcache}{{1}{3}{No KV-cache}{equation.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Latency}{3}{subsection.4.4}\protected@file@percent }
+\newlabel{sec:latency}{{4.4}{3}{Latency}{subsection.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Forward-pass latency (ms) at batch=1, FP32 GPU.}}{3}{table.caption.17}\protected@file@percent }
+\newlabel{tab:latency}{{7}{3}{Forward-pass latency (ms) at batch=1, FP32 GPU}{table.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces VRAM vs.\ sequence length. \textsc  {Grassmann}{} models stay nearly flat (no KV-cache); the Transformer grows steeply due to $\ensuremath  {\mathcal  {O}(n^{2})}$ attention buffers and KV-cache.}}{4}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:vram}{{3}{4}{VRAM vs.\ sequence length. \grassmann {} models stay nearly flat (no KV-cache); the Transformer grows steeply due to $\bigO {n^{2}}$ attention buffers and KV-cache}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Latency vs.\ sequence length. The Transformer's latency grows super-linearly; \textsc  {Grassmann}{} stays nearly flat.}}{4}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:latency}{{4}{4}{Latency vs.\ sequence length. The Transformer's latency grows super-linearly; \grassmann {} stays nearly flat}{figure.caption.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}INT8 Dynamic Quantisation (CPU)}{4}{subsection.4.5}\protected@file@percent }
+\newlabel{sec:int8}{{4.5}{4}{INT8 Dynamic Quantisation (CPU)}{subsection.4.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces INT8 throughput and latency on CPU.}}{4}{table.caption.19}\protected@file@percent }
+\newlabel{tab:int8}{{8}{4}{INT8 throughput and latency on CPU}{table.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces FP32 and INT8 throughput comparison at $n=512$.}}{4}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:throughput-all}{{5}{4}{FP32 and INT8 throughput comparison at $n=512$}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Weight Sparsity Analysis}{4}{subsection.4.6}\protected@file@percent }
+\newlabel{sec:sparsity}{{4.6}{4}{Weight Sparsity Analysis}{subsection.4.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Weight storage savings from 2:4 sparsity.}}{4}{table.caption.21}\protected@file@percent }
+\newlabel{tab:sparsity}{{9}{4}{Weight storage savings from 2:4 sparsity}{table.caption.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Summary}{4}{section.5}\protected@file@percent }
+\newlabel{sec:summary}{{5}{4}{Summary}{section.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{4}{section.6}\protected@file@percent }
+\newlabel{sec:discussion}{{6}{4}{Discussion}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Throughput crossover.}{4}{section*.23}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Memory wall.}{4}{section*.24}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Consolidated comparison at $n = 2048$. Best in each row is \textbf  {bold}.}}{5}{table.caption.22}\protected@file@percent }
+\newlabel{tab:summary}{{10}{5}{Consolidated comparison at $n = 2048$. Best in each row is \textbf {bold}}{table.caption.22}{}}
+\@writefile{toc}{\contentsline {paragraph}{Quality.}{5}{section*.25}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{\textsc  {PAT}{} overhead.}{5}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{5}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion}{5}{section.7}\protected@file@percent }
+\newlabel{sec:conclusion}{{7}{5}{Conclusion}{section.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Reproducibility}{5}{section.8}\protected@file@percent }
+\newlabel{sec:repro}{{8}{5}{Reproducibility}{section.8}{}}
+\@writefile{toc}{\contentsline {paragraph}{Training commands.}{5}{section*.28}\protected@file@percent }
+\bibstyle{plainnat}
+\bibcite{grassmann2024}{{1}{2024}{{Grassmann Flows}}{{}}}
+\bibcite{nvidia2to4}{{2}{2021}{{NVIDIA 2:4 Sparsity}}{{}}}
+\bibcite{merity2017pointer}{{3}{2017}{{Merity et~al.}}{{}}}
+\bibcite{radford2019language}{{4}{2019}{{Radford et~al.}}{{}}}
+\bibcite{vaswani2017attention}{{5}{2017}{{Vaswani et~al.}}{{}}}
+\@writefile{toc}{\contentsline {paragraph}{Benchmark commands.}{6}{section*.29}\protected@file@percent }
+\gdef \@abspage@last{6}

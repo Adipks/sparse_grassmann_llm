@@ -36,12 +36,16 @@ class Wikitext2LMDataset(Dataset):
         raw = load_dataset("wikitext", "wikitext-2-raw-v1", split=split)
 
         # Flatten into a single stream of token ids.
-        token_ids: List[int] = []
+        # Use add_special_tokens=False so BOS/EOS are NOT inserted between
+        # every article — that would teach the model to always predict EOS,
+        # making open-ended generation collapse immediately.  We prepend a
+        # single BOS at the very start of the corpus stream instead.
+        token_ids: List[int] = [tokenizer.bos_id]
         for ex in raw:
             text = ex.get("text", "")
             if not text or text.isspace():
                 continue
-            ids = tokenizer.encode(text)
+            ids = tokenizer.encode(text, add_special_tokens=False)
             token_ids.extend(ids)
 
         # Chunk into (seq_len + 1) blocks for input/target pairs.

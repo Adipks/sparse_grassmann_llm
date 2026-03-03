@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "grassmann": {
+      "val_ppl": 139.44,
+      "weight_mb": 270.6,
+      "trained_seq_len": 2048
+    },
+    "grassmann_dense": {
+      "val_ppl": 132.57,
+      "weight_mb": 270.6,
+      "trained_seq_len": 2048
+    },
+    "transformer": {
+      "val_ppl": 517.32,
+      "weight_mb": 267.8,
+      "trained_seq_len": 2048
+    }
+  },
+  "throughput": {
+    "grassmann_fp": {
+      "128": {
+        "tokens_per_sec": 4687.7,
+        "latency_ms_per_fwd": 27.305,
+        "peak_vram_mb": 155.7
+      },
+      "256": {
+        "tokens_per_sec": 9321.4,
+        "latency_ms_per_fwd": 27.464,
+        "peak_vram_mb": 158.4
+      },
+      "512": {
+        "tokens_per_sec": 19125.8,
+        "latency_ms_per_fwd": 26.77,
+        "peak_vram_mb": 166.9
+      },
+      "1024": {
+        "tokens_per_sec": 37536.4,
+        "latency_ms_per_fwd": 27.28,
+        "peak_vram_mb": 185.1
+      },
+      "2048": {
+        "tokens_per_sec": 42683.0,
+        "latency_ms_per_fwd": 47.982,
+        "peak_vram_mb": 219.2
+      }
+    },
+    "grassmann_int8": {
+      "128": {
+        "tokens_per_sec": 1817.4,
+        "latency_ms_per_fwd": 70.43,
+        "peak_vram_mb": 0.0
+      },
+      "256": {
+        "tokens_per_sec": 2449.5,
+        "latency_ms_per_fwd": 104.51,
+        "peak_vram_mb": 0.0
+      },
+      "512": {
+        "tokens_per_sec": 2932.9,
+        "latency_ms_per_fwd": 174.569,
+        "peak_vram_mb": 0.0
+      },
+      "1024": {
+        "tokens_per_sec": 3180.1,
+        "latency_ms_per_fwd": 321.999,
+        "peak_vram_mb": 0.0
+      },
+      "2048": {
+        "tokens_per_sec": 3006.8,
+        "latency_ms_per_fwd": 681.113,
+        "peak_vram_mb": 0.0
+      }
+    },
+    "grassmann-dense_fp": {
+      "128": {
+        "tokens_per_sec": 4047.3,
+        "latency_ms_per_fwd": 31.626,
+        "peak_vram_mb": 155.7
+      },
+      "256": {
+        "tokens_per_sec": 8119.1,
+        "latency_ms_per_fwd": 31.53,
+        "peak_vram_mb": 158.2
+      },
+      "512": {
+        "tokens_per_sec": 17259.9,
+        "latency_ms_per_fwd": 29.664,
+        "peak_vram_mb": 167.3
+      },
+      "1024": {
+        "tokens_per_sec": 35467.3,
+        "latency_ms_per_fwd": 28.872,
+        "peak_vram_mb": 185.1
+      },
+      "2048": {
+        "tokens_per_sec": 48365.6,
+        "latency_ms_per_fwd": 42.344,
+        "peak_vram_mb": 219.2
+      }
+    },
+    "grassmann-dense_int8": {
+      "128": {
+        "tokens_per_sec": 1834.5,
+        "latency_ms_per_fwd": 69.773,
+        "peak_vram_mb": 0.0
+      },
+      "256": {
+        "tokens_per_sec": 2479.2,
+        "latency_ms_per_fwd": 103.259,
+        "peak_vram_mb": 0.0
+      },
+      "512": {
+        "tokens_per_sec": 3165.9,
+        "latency_ms_per_fwd": 161.724,
+        "peak_vram_mb": 0.0
+      },
+      "1024": {
+        "tokens_per_sec": 3192.0,
+        "latency_ms_per_fwd": 320.806,
+        "peak_vram_mb": 0.0
+      },
+      "2048": {
+        "tokens_per_sec": 3017.7,
+        "latency_ms_per_fwd": 678.661,
+        "peak_vram_mb": 0.0
+      }
+    },
+    "transformer_fp": {
+      "128": {
+        "tokens_per_sec": 12399.2,
+        "latency_ms_per_fwd": 10.323,
+        "peak_vram_mb": 150.6
+      },
+      "256": {
+        "tokens_per_sec": 25864.2,
+        "latency_ms_per_fwd": 9.898,
+        "peak_vram_mb": 154.9
+      },
+      "512": {
+        "tokens_per_sec": 41903.1,
+        "latency_ms_per_fwd": 12.219,
+        "peak_vram_mb": 169.0
+      },
+      "1024": {
+        "tokens_per_sec": 35306.5,
+        "latency_ms_per_fwd": 29.003,
+        "peak_vram_mb": 226.4
+      },
+      "2048": {
+        "tokens_per_sec": 23934.4,
+        "latency_ms_per_fwd": 85.567,
+        "peak_vram_mb": 444.7
+      }
+    },
+    "transformer_int8": {
+      "128": {
+        "tokens_per_sec": 2460.2,
+        "latency_ms_per_fwd": 52.028,
+        "peak_vram_mb": 0.0
+      },
+      "256": {
+        "tokens_per_sec": 3052.3,
+        "latency_ms_per_fwd": 83.871,
+        "peak_vram_mb": 0.0
+      },
+      "512": {
+        "tokens_per_sec": 2732.5,
+        "latency_ms_per_fwd": 187.372,
+        "peak_vram_mb": 0.0
+      },
+      "1024": {
+        "tokens_per_sec": 1857.8,
+        "latency_ms_per_fwd": 551.187,
+        "peak_vram_mb": 0.0
+      },
+      "2048": {
+        "tokens_per_sec": 1239.1,
+        "latency_ms_per_fwd": 1652.868,
+        "peak_vram_mb": 0.0
+      }
+    }
+  }
+}
