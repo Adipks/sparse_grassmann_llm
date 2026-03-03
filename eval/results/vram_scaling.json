@@ -1,0 +1,146 @@
+[
+  {
+    "model": "grassmann",
+    "seq_len": 64,
+    "extended": false,
+    "peak_vram_mb": 154.7,
+    "tokens_per_sec": 2214.2,
+    "latency_ms": 28.9
+  },
+  {
+    "model": "grassmann",
+    "seq_len": 128,
+    "extended": false,
+    "peak_vram_mb": 155.7,
+    "tokens_per_sec": 4364.8,
+    "latency_ms": 29.33
+  },
+  {
+    "model": "grassmann",
+    "seq_len": 256,
+    "extended": false,
+    "peak_vram_mb": 158.2,
+    "tokens_per_sec": 8691.7,
+    "latency_ms": 29.45
+  },
+  {
+    "model": "grassmann",
+    "seq_len": 512,
+    "extended": false,
+    "peak_vram_mb": 167.3,
+    "tokens_per_sec": 17290.1,
+    "latency_ms": 29.61
+  },
+  {
+    "model": "grassmann",
+    "seq_len": 1024,
+    "extended": false,
+    "peak_vram_mb": 185.1,
+    "tokens_per_sec": 32685.2,
+    "latency_ms": 31.33
+  },
+  {
+    "model": "grassmann",
+    "seq_len": 2048,
+    "extended": false,
+    "peak_vram_mb": 219.2,
+    "tokens_per_sec": 42913.4,
+    "latency_ms": 47.72
+  },
+  {
+    "model": "grassmann_dense",
+    "seq_len": 64,
+    "extended": false,
+    "peak_vram_mb": 154.7,
+    "tokens_per_sec": 2240.7,
+    "latency_ms": 28.56
+  },
+  {
+    "model": "grassmann_dense",
+    "seq_len": 128,
+    "extended": false,
+    "peak_vram_mb": 155.7,
+    "tokens_per_sec": 4489.0,
+    "latency_ms": 28.51
+  },
+  {
+    "model": "grassmann_dense",
+    "seq_len": 256,
+    "extended": false,
+    "peak_vram_mb": 158.2,
+    "tokens_per_sec": 9354.3,
+    "latency_ms": 27.37
+  },
+  {
+    "model": "grassmann_dense",
+    "seq_len": 512,
+    "extended": false,
+    "peak_vram_mb": 167.3,
+    "tokens_per_sec": 18742.3,
+    "latency_ms": 27.32
+  },
+  {
+    "model": "grassmann_dense",
+    "seq_len": 1024,
+    "extended": false,
+    "peak_vram_mb": 185.1,
+    "tokens_per_sec": 35319.8,
+    "latency_ms": 28.99
+  },
+  {
+    "model": "grassmann_dense",
+    "seq_len": 2048,
+    "extended": false,
+    "peak_vram_mb": 219.2,
+    "tokens_per_sec": 42745.1,
+    "latency_ms": 47.91
+  },
+  {
+    "model": "transformer",
+    "seq_len": 64,
+    "extended": false,
+    "peak_vram_mb": 150.5,
+    "tokens_per_sec": 6973.3,
+    "latency_ms": 9.18
+  },
+  {
+    "model": "transformer",
+    "seq_len": 128,
+    "extended": false,
+    "peak_vram_mb": 151.4,
+    "tokens_per_sec": 14244.7,
+    "latency_ms": 8.99
+  },
+  {
+    "model": "transformer",
+    "seq_len": 256,
+    "extended": false,
+    "peak_vram_mb": 155.3,
+    "tokens_per_sec": 28521.8,
+    "latency_ms": 8.98
+  },
+  {
+    "model": "transformer",
+    "seq_len": 512,
+    "extended": false,
+    "peak_vram_mb": 169.9,
+    "tokens_per_sec": 41038.2,
+    "latency_ms": 12.48
+  },
+  {
+    "model": "transformer",
+    "seq_len": 1024,
+    "extended": false,
+    "peak_vram_mb": 228.1,
+    "tokens_per_sec": 36768.2,
+    "latency_ms": 27.85
+  },
+  {
+    "model": "transformer",
+    "seq_len": 2048,
+    "extended": false,
+    "peak_vram_mb": 445.6,
+    "tokens_per_sec": 23698.5,
+    "latency_ms": 86.42
+  }
+]
